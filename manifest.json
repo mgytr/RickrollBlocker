@@ -1,0 +1,26 @@
+{
+    "name": "RickRoll Blocker",
+    "description": "Blocks video you clicked on like on a website except youtube if the video is a rickroll using title (can add custom blacklist) and rickroll/custom video list",
+    "version": "1.0",
+
+    "manifest_version": 3,
+    "permissions": [
+        "scripting",
+        "tabs",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://www.youtube.com/*"
+    ],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "256": "icon.png"
+    }
+}

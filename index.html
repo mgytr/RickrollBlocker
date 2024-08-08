@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 630px;
+            height: 510px;
+            background: rgb(36, 6, 6);
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div.blacklists div.cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80%;
+            width: 40%;
+        }
+        .banned, .bannedt {
+            border-radius: 10px;
+            border: 2px rgb(112, 26, 26) solid;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0;
+            margin-top: 10px;
+            height: 90%;
+            overflow-y: scroll;
+
+        }
+
+        .banned p, .bannedt p {
+            display: block;
+        }
+        input[type="text"] {
+            width: 90%;
+            margin-top: 10px;
+            background-color: rgba(65, 10, 10, 0.106);
+            border: none;
+            border: 2px rgb(112, 26, 26) solid;
+            border-radius: 8px;
+            height: 30px;
+            font-size: 11pt;
+            padding: 14px 8px;
+            transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
+            color: white;
+
+        }
+        button {
+            background-color: rgba(65, 10, 10, 0.106);
+            border: none;
+            border: 2px rgb(112, 26, 26) solid;
+            border-radius: 8px;
+            font-size: 11pt;
+            padding: 9px 25px;
+            transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
+            color: white;
+            display: block;
+
+
+        }
+        input[type="text"]:hover, button:hover {
+            background-color: rgba(147, 26, 26, 0.445);
+        }
+        input[type="text"]:focus, button:active {
+            background-color: rgba(183, 39, 39, 0.274);
+        }
+        .blacklists {
+            display: flex;
+            column-gap: 50px;
+            height: 70%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="status" id="statuss">
+    <label for="statuss">Enabled</label>
+    <br><br>
+    <div class="blacklists">
+        <div class="cont">
+        <b>Banned videos (right click to remove)</b>
+        <div class="banned">
+        </div>
+        <input type="text" id="banname" placeholder="YouTube Video ID">
+        <br>
+        <button id="banvid">Add</button>
+        </div>
+        <div class="cont">
+            <b>Banned text in titles (right click to remove)</b>
+            <div class="bannedt">
+            </div>
+            <input type="text" id="bantitle" placeholder="Text to ban (will be lowercase)">
+            <br>
+            <button id="bantitleb">Add</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
